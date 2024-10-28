@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Básica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2196F3;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 10px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Física Básica</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#force">Fuerza</a></li>
+                <li><a href="#energy">Energía</a></li>
+                <li><a href="#motion">Movimiento</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bienvenido a la Física</h2>
+            <p>La física es la ciencia que estudia la naturaleza y sus leyes. Aborda conceptos fundamentales que explican el comportamiento de la materia y la energía.</p>
+        </section>
+
+        <section id="force">
+            <h2>Fuerza</h2>
+            <p>La fuerza es una interacción que cambia el movimiento de un objeto. Se mide en newtons (N) y se representa con la fórmula:</p>
+            <p><strong>F = m × a</strong></p>
+            <p>donde <em>F</em> es la fuerza, <em>m</em> es la masa y <em>a</em> es la aceleración.</p>
+        </section>
+
+        <section id="energy">
+            <h2>Energía</h2>
+            <p>La energía es la capacidad de realizar trabajo. Existen diferentes tipos de energía, como:</p>
+            <ul>
+                <li><strong>Energía Cinética</strong>: Energía de un objeto en movimiento.</li>
+                <li><strong>Energía Potencial</strong>: Energía almacenada debido a la posición de un objeto.</li>
+                <li><strong>Energía Térmica</strong>: Energía relacionada con la temperatura de un objeto.</li>
+            </ul>
+        </section>
+
+        <section id="motion">
+            <h2>Movimiento</h2>
+            <p>El movimiento es el cambio de posición de un objeto en el tiempo. Hay diferentes tipos de movimiento, incluyendo:</p>
+            <ul>
+                <li><strong>Movimiento Rectilíneo</strong>: Movimiento en línea recta.</li>
+                <li><strong>Movimiento Circular</strong>: Movimiento en una trayectoria circular.</li>
+                <li><strong>Movimiento Oscilatorio</strong>: Movimiento de vaivén, como el de un péndulo.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="responseMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Física Básica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            document.getElementById('responseMessage').innerText = `Gracias por tu mensaje, ${name}! Nos contactaremos pronto.`;
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
